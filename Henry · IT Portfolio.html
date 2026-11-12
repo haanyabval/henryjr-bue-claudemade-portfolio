@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Henry · IT Portfolio</title>
+<meta name="description" content="Portfolio of Henry, 3rd year BSIT student exploring networking, databases and cybersecurity.">
+<style>
+:root{--bg:#f6f8fb;--sf:#fff;--tx:#0f172a;--mu:#5b6678;--ac:#0e9f6e;--ac2:#4f46e5;--bd:#e2e8f0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#070b14;--sf:#0f1626;--tx:#e6edf7;--mu:#8b97ad;--ac:#34d399;--ac2:#818cf8;--bd:#1e2a44;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#070b14;--sf:#0f1626;--tx:#e6edf7;--mu:#8b97ad;--ac:#34d399;--ac2:#818cf8;--bd:#1e2a44;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background-image:radial-gradient(circle at 15% 0%,color-mix(in srgb,var(--ac2) 18%,transparent),transparent 40%),radial-gradient(circle at 90% 10%,color-mix(in srgb,var(--ac) 14%,transparent),transparent 35%)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:var(--ac);text-decoration:none}
+.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
+nav{max-width:1080px;margin:auto;padding:10px 20px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.logo{font-weight:700;margin-right:auto;color:var(--tx)}
+nav a.l{color:var(--mu);padding:6px 10px;border-radius:8px;font-size:14px}
+nav a.l:hover,nav a.l.on{color:var(--tx);background:var(--sf)}
+button{font:inherit;cursor:pointer}
+.tg{background:var(--sf);border:1px solid var(--bd);color:var(--tx);border-radius:8px;padding:5px 10px}
+main{max-width:1080px;margin:auto;padding:40px 20px 60px}
+.pg{display:none;animation:in .45s ease}
+.pg.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;margin:.3em 0}
+h2{font-size:1.8rem;margin:0 0 .3em}
+.g{background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.mu{color:var(--mu)}
+.btn{display:inline-block;padding:10px 18px;border-radius:10px;border:1px solid var(--bd);background:var(--sf);color:var(--tx);font-weight:600}
+.btn.p{background:linear-gradient(90deg,var(--ac),var(--ac2));color:#06101c;border:0}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:18px;transition:.25s}
+.card:hover{transform:translateY(-3px);border-color:var(--ac)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:18px}
+.term{background:#050912;color:#c9f7e3;border:1px solid var(--bd);border-radius:12px;padding:16px;font-size:14px;margin-top:24px;max-width:560px}
+.term .d{color:#34d399}
+.cur{display:inline-block;width:8px;height:1em;background:#34d399;vertical-align:-2px;animation:b 1s steps(1) infinite}
+@keyframes b{50%{opacity:0}}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.chip{border:1px solid var(--bd);background:var(--sf);color:var(--mu);border-radius:99px;padding:4px 14px;font-size:14px}
+.chip.on{color:#06101c;background:var(--ac);border-color:var(--ac)}
+.tag{font-size:12px;border:1px solid var(--bd);border-radius:6px;padding:1px 8px;color:var(--mu);margin-right:4px}
+.bar{height:6px;background:var(--bd);border-radius:9px;overflow:hidden;margin-top:8px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ac),var(--ac2));transition:width 1s ease}
+.tl{border-left:2px solid var(--bd);margin-left:6px;padding-left:20px}
+.tl>div{margin-bottom:22px;position:relative}
+.tl>div::before{content:"";position:absolute;left:-27px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--ac)}
+form{display:grid;gap:12px;max-width:560px}
+input,textarea,select{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--bd);background:var(--sf);color:var(--tx);font:inherit}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:720px){.two{grid-template-columns:1fr}}
+footer{text-align:center;color:var(--mu);padding:30px 20px;border-top:1px solid var(--bd);font-size:14px}
+.pill{display:inline-block;padding:3px 12px;border-radius:99px;background:color-mix(in srgb,var(--ac) 18%,transparent);color:var(--ac);font-size:13px}
+</style>
+</head>
+<body>
+<header><nav id="nav"><a class="logo mono" href="#home">&lt;henry/&gt;</a><button class="tg" id="th" aria-label="Toggle theme">◐</button></nav></header>
+<main>
+
+<section class="pg" id="home">
+<span class="pill">● Open to internships · Networking · Database · Cybersecurity</span>
+<h1>Hi, I’m Henry.<br><span class="g">Building secure, well-designed things.</span></h1>
+<p class="mu" style="max-width:620px">3rd year BSIT student exploring web development with an eye for design and aesthetics, and looking for internships where I can grow in networking, databases and cybersecurity.</p>
+<p><a class="btn p" href="#contact">Hire me for an internship</a> <a class="btn" href="#projects">View projects</a> <a class="btn" href="#resume">Résumé</a></p>
+<div class="term mono"><div><span class="d">henry@portfolio</span>:~$ <span id="ty"></span><span class="cur"></span></div></div>
+<div class="grid">
+<a class="card" href="#skills"><b>🌐 Networking</b><br><span class="mu">Subnetting, routing, Cisco Packet Tracer labs</span></a>
+<a class="card" href="#skills"><b>🗄️ Database</b><br><span class="mu">SQL, schema design, normalization</span></a>
+<a class="card" href="#skills"><b>🛡️ Cybersecurity</b><br><span class="mu">Fundamentals, secure web practices</span></a>
+</div>
+</section>
+
+<section class="pg" id="about">
+<h2>About me</h2>
+<div class="two"><div>
+<p>I’m a 20-year-old BSIT student who enjoys both sides of tech: the logic behind systems and the visual craft of how they look and feel. I design on Canva, I’m comfortable with the arts, and I’m building my web development skills project by project.</p>
+<p>I’m looking for internship opportunities to learn how real networks, databases and security practices work in a professional team.</p></div>
+<div class="card"><b>Quick facts</b><p class="mu">📍 Philippines<br>🎓 BSIT, 3rd year<br>🎯 Interests: networking, database, cybersecurity<br>🎨 Design: Canva, UI aesthetics<br>💬 Working on: English communication</p></div></div>
+</section>
+
+<section class="pg" id="skills">
+<h2>Skills</h2><p class="mu">Filter by internship track. Bars show my current learning level (edit them in the code).</p>
+<div class="chips" id="sk"></div><div class="grid" id="skg"></div>
+</section>
+
+<section class="pg" id="projects">
+<h2>Projects</h2><p class="mu">Real work and learning labs. Add live links and repos as you publish them.</p>
+<div class="chips" id="pf"></div><div class="grid" id="pg"></div>
+</section>
+
+<section class="pg" id="labs">
+<h2>Labs &amp; certifications</h2><p class="mu">My internship-readiness roadmap. Mark each as done when finished.</p>
+<div class="grid" id="lb"></div>
+</section>
+
+<section class="pg" id="experience">
+<h2>Education &amp; experience</h2>
+<div class="tl">
+<div><b>BSIT, 3rd year</b><br><span class="mu">Information Technology · coursework in system integration and architecture, game design, web design and development</span></div>
+<div><b>Capstone team project: IntRENEt</b><br><span class="mu">Team system development with sprints, backlog, Definition of Done and documentation</span></div>
+<div><b>Your internship here</b><br><span class="mu">This slot is waiting for you. Let’s talk.</span></div>
+</div>
+</section>
+
+<section class="pg" id="blog">
+<h2>Notes &amp; blog</h2><p class="mu">Short write-ups show recruiters how you think. Replace these with your own.</p>
+<div class="grid">
+<div class="card"><span class="tag">Networking</span><b>How I learned subnetting</b><p class="mu">Draft · coming soon</p></div>
+<div class="card"><span class="tag">Database</span><b>From messy table to 3NF</b><p class="mu">Draft · coming soon</p></div>
+<div class="card"><span class="tag">Security</span><b>OWASP Top 10 for beginners</b><p class="mu">Draft · coming soon</p></div>
+</div>
+</section>
+
+<section class="pg" id="resume">
+<h2>Résumé</h2>
+<div class="card"><b>Henry</b> · BSIT student<p class="mu">Objective: Internship in networking, database administration or cybersecurity.</p>
+<p><b>Skills:</b> HTML, CSS, JavaScript, Git/GitHub, SQL basics, networking fundamentals, Canva design</p>
+<p><b>Projects:</b> IntRENEt (capstone), Share Space website, game for Google Play</p></div>
+<p><button class="btn p" onclick="window.print()">Print / Save as PDF</button></p>
+</section>
+
+<section class="pg" id="contact">
+<h2>Let’s talk</h2><p class="mu">Recruiter or mentor? Send a message. It opens your email app with everything filled in.</p>
+<form id="cf">
+<input id="n" placeholder="Your name" required>
+<input id="c" placeholder="Company / organization">
+<select id="t"><option>Networking internship</option><option>Database internship</option><option>Cybersecurity internship</option><option>Web development</option><option>Other</option></select>
+<textarea id="m" rows="5" placeholder="Message" required></textarea>
+<button class="btn p" type="submit">Send message</button>
+</form>
+<p class="mu">Or find me on <a href="https://github.com/haanyabval" target="_blank" rel="noopener">GitHub</a> · <button class="tg" id="cp">Copy email</button></p>
+</section>
+
+<section class="pg" id="notfound"><h2>404</h2><p class="mu">That page doesn’t exist. <a href="#home">Go home</a>.</p></section>
+</main>
+<footer>© <span id="yr"></span> Henry · Built with HTML, CSS and JavaScript · <a href="https://github.com/haanyabval" target="_blank" rel="noopener">github.com/haanyabval</a></footer>
+
+<script>
+var EMAIL="your-email@example.com";
+var PAGES=["home","about","skills","projects","labs","experience","blog","resume","contact"];
+var SK=[["Subnetting & IP addressing","Networking",55],["Cisco Packet Tracer","Networking",45],["Routing & switching basics","Networking",40],["SQL queries","Database",60],["Database design (ERD, normalization)","Database",55],["MySQL / PostgreSQL","Database",45],["Security fundamentals (CIA triad)","Cybersecurity",50],["OWASP Top 10 awareness","Cybersecurity",35],["Linux command line","Cybersecurity",40],["HTML / CSS / JavaScript","Web",70],["Git & GitHub","Web",60],["UI design (Canva)","Web",80]];
+var PR=[["IntRENEt (Capstone)","Capstone","Team system built across Sprints 1–3 with backlog, Definition of Done and documentation."],["Share Space website","Web","Website built with HTML, CSS and JavaScript, hosted on Vercel."],["Game for Google Play","Game","Course project: a game designed for upload to the Play Store."],["Auto meeting-minutes tool","Idea","Planned open-source tool for Tagalog + English meeting minutes."]];
+var LB=[["Cisco Packet Tracer: build a small office LAN","Networking"],["Practice SQL on a sample database","Database"],["TryHackMe: Pre-Security path","Cybersecurity"],["Cisco Networking Academy: Networking Basics","Networking"],["Google Cybersecurity Certificate (optional)","Cybersecurity"],["Deploy this portfolio to GitHub Pages","Web"]];
+function $(i){return document.getElementById(i)}
+function chips(id,list,cb){var h="";list.forEach(function(x,i){h+='<button class="chip'+(i?'':' on')+'">'+x+'</button>'});$(id).innerHTML=h;$(id).onclick=function(e){if(e.target.tagName!="BUTTON")return;[].forEach.call($(id).children,function(c){c.classList.remove("on")});e.target.classList.add("on");cb(e.target.textContent)}}
+function skills(f){$("skg").innerHTML=SK.filter(function(s){return f=="All"||s[1]==f}).map(function(s){return '<div class="card"><b>'+s[0]+'</b><br><span class="tag">'+s[1]+'</span><div class="bar"><i data-w="'+s[2]+'"></i></div></div>'}).join("");setTimeout(function(){[].forEach.call(document.querySelectorAll(".bar i"),function(b){b.style.width=b.dataset.w+"%"})},50)}
+function projects(f){$("pg").innerHTML=PR.filter(function(p){return f=="All"||p[1]==f}).map(function(p){return '<div class="card"><span class="tag">'+p[1]+'</span><h3 style="margin:.3em 0">'+p[0]+'</h3><p class="mu">'+p[2]+'</p></div>'}).join("")}
+chips("sk",["All","Networking","Database","Cybersecurity","Web"],skills);skills("All");
+chips("pf",["All","Capstone","Web","Game","Idea"],projects);projects("All");
+var done={};try{done=JSON.parse(localStorage.getItem("labs")||"{}")}catch(e){}
+function labs(){$("lb").innerHTML=LB.map(function(l,i){return '<label class="card" style="cursor:pointer;display:block"><input type="checkbox" data-i="'+i+'" style="width:auto;margin-right:8px"'+(done[i]?" checked":"")+'><b>'+l[0]+'</b><br><span class="tag">'+l[1]+'</span></label>'}).join("")}
+labs();$("lb").onchange=function(e){done[e.target.dataset.i]=e.target.checked;try{localStorage.setItem("labs",JSON.stringify(done))}catch(x){}};
+$("nav").insertAdjacentHTML("beforeend",PAGES.map(function(p){return '<a class="l" href="#'+p+'">'+p[0].toUpperCase()+p.slice(1)+'</a>'}).join(""));
+$("nav").appendChild($("th"));
+function route(){var h=location.hash.slice(1)||"home";if(PAGES.indexOf(h)<0)h="notfound";[].forEach.call(document.querySelectorAll(".pg"),function(s){s.classList.toggle("on",s.id==h)});[].forEach.call(document.querySelectorAll("nav a.l"),function(a){a.classList.toggle("on",a.getAttribute("href")=="#"+h)});scrollTo(0,0);document.title="Henry · "+h[0].toUpperCase()+h.slice(1)}
+addEventListener("hashchange",route);route();
+var L=["whoami → Henry, BSIT student","nmap --learn networking","SELECT * FROM skills WHERE track='database';","sudo secure --everything"],li=0,ci=0,del=false;
+(function tick(){var s=L[li];$("ty").textContent=s.slice(0,ci);if(!del&&ci<s.length){ci++;setTimeout(tick,60)}else if(!del){del=true;setTimeout(tick,1400)}else if(ci>0){ci--;setTimeout(tick,25)}else{del=false;li=(li+1)%L.length;setTimeout(tick,300)}})();
+$("th").onclick=function(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme=="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=d?"light":"dark";try{localStorage.setItem("theme",r.dataset.theme)}catch(e){}};
+try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}
+$("cf").onsubmit=function(e){e.preventDefault();location.href="mailto:"+EMAIL+"?subject="+encodeURIComponent($("t").value+" – "+$("n").value)+"&body="+encodeURIComponent("From: "+$("n").value+" ("+$("c").value+")\n\n"+$("m").value)};
+$("cp").onclick=function(){try{navigator.clipboard.writeText(EMAIL);$("cp").textContent="Copied ✓"}catch(e){$("cp").textContent=EMAIL}};
+$("yr").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
